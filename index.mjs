@@ -84,8 +84,6 @@ const setup = function (swaggerDoc, opts, options, customCss, customfavIcon, swa
  * @param {import('@seobryn/faster/src/faster.mjs').FasterResponse} res
  */
 async function swaggerInitFn (req, res) {
-  console.log(req.url, trimQuery(req.url).endsWith('/swagger-ui-init.js'))
-
   if (trimQuery(req.url).endsWith('/package.json')) {
     return res.status(404).send('Not Found', { 'Content-Type': 'text/plain' })
   } else if (trimQuery(req.url).endsWith('/swagger-ui-init.js')) {
