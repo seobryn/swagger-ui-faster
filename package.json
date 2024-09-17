@@ -1,0 +1,67 @@
+{
+  "name": "@seobryn/swagger-ui-faster",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Swagger UI For Faster Web Framework",
+  "main": "./index.mjs",
+  "files": [
+    "package.json",
+    "index.mjs",
+    "utils/fs-utils.mjs",
+    "indexTemplate.html.tpl",
+    "swagger-ui-init.js.tpl",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/test.spec.mjs",
+    "dev": "NODE_NO_WARNINGS=1 nodemon -q ./test/testapp/run.mjs"
+  },
+  "keywords": [
+    "swagger",
+    "faster",
+    "ui",
+    "json",
+    "documentation"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">= v18.19.0"
+  },
+  "dependencies": {
+    "swagger-ui-dist": "^3.18.1"
+  },
+  "devDependencies": {
+    "@seobryn/faster": "^1.0.5",
+    "es6-shim": "0.35.2",
+    "mocha": "^10.7.3",
+    "nodemon": "^3.1.4",
+    "puppeteer": "^23.1.0",
+    "standard": "^17.1.2"
+  },
+  "author": {
+    "name": "Jose Joya",
+    "email": "ing.jose.joya@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:seobryn/swagger-ui-faster.git"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/seobryn/swagger-ui-faster/issues"
+  },
+  "homepage": "https://github.com/seobryn/swagger-ui-faster",
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "env": {
+      "node": true
+    },
+    "ignorePatterns": [
+      "dist/**",
+      "node_modules/**"
+    ]
+  }
+}
