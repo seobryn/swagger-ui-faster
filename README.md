@@ -68,7 +68,7 @@ import { Faster } from '@seobryn/faster';
 import swaggerUi from '@seobryn/swagger-ui-faster';
 import swaggerSpec from './swagger.json' assert { type: "json" };
 
-const server = restify.createServer();
+const server = new Faster({ parseBody: true, log: { errorAsJson: true } });
 
 var options = {
 	swaggerOptions: {
@@ -88,7 +88,7 @@ To customize the style of the swagger page, you can pass custom CSS as the 'cust
 E.g. to hide the swagger header:
 
 ```javascript
-import restify from 'restify';
+import { Faster } from '@seobryn/faster';
 import swaggerUi from '@seobryn/swagger-ui-faster';
 import swaggerSpec from './swagger.json' assert { type: "json" };
 
